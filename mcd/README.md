@@ -1,6 +1,7 @@
 # Multi-Collateral Dai
 
-This repo contains guides for interacting and integrating with Multi-Collateral Dai (MCD) -- the next version of the Maker platform.
+This repo contains guides for interacting and integrating with Multi-Collateral
+Dai (MCD) -- the next version of the Maker platform.
 
 ## Guides in this repo
 
