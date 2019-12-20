@@ -1,6 +1,6 @@
 # How to use Oasis Direct Proxy on OasisDEX Protocol
 
-**Level:** Intermediate  
+**Level:** Intermediate
 **Estimated Time:** 30 minutes
 
 # Overview
@@ -60,12 +60,12 @@ Here you will find all the necessary contract addresses.
 
 Export the below environmental variables in your terminal:
 
-`export PROXY_REGISTRY=0x64a436ae831c1672ae81f674cab8b6775df3475c`  
-`export OASIS_DIRECT_PROXY=0xEE419971E63734Fed782Cfe49110b1544ae8a773`  
-`export WETH=0xd0a1e359811322d97991e03f863a0c30c2cf029c`  
-`export DAI=0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa`  
-`export OTC=0x4A6bC4e803c62081ffEbCc8d227B5a87a58f1F8F`  
-`export ETH_GAS=4000000`  
+`export PROXY_REGISTRY=0x64a436ae831c1672ae81f674cab8b6775df3475c`
+`export OASIS_DIRECT_PROXY=0xEE419971E63734Fed782Cfe49110b1544ae8a773`
+`export WETH=0xd0a1e359811322d97991e03f863a0c30c2cf029c`
+`export DAI=0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa`
+`export OTC=0x4A6bC4e803c62081ffEbCc8d227B5a87a58f1F8F`
+`export ETH_GAS=4000000`
 `export ETH_GAS_PRICE=2500000000`
 
 **Proxy Registry** - Is a map of proxy contracts and their owner addresses. Here
@@ -96,7 +96,7 @@ There are many ways to interact with the Oasis Direct Proxy contract. You can:
   interacting with the Oasis Direct contract
 
 If you choose to interact directly with the Oasis Direct Proxy, then you’ll have
-to give allowance to this contract.  
+to give allowance to this contract.
 If you choose to use DS-Proxy, then you give allowance only once and this
 contract can interact with any other proxy actions contract without having to
 give allowance again.
@@ -173,7 +173,7 @@ majority of functions having a `pull` of funds method from your wallet in order
 to carry the trade.
 
 So, in the case that you want to sell Dai or WETH, you will have to approve the
-tokens to DS-Proxy.  
+tokens to DS-Proxy.
 Below is an example of how to do it:
 
 **Approve Dai in MYPROXY:**
@@ -237,7 +237,7 @@ the contract for purchasing Dai.
 `seth send $MYPROXY 'execute(address, bytes memory)' $OASIS_DIRECT_PROXY $calldata --value $(seth --to-wei 0.05 eth)`
 
 [This](https://kovan.etherscan.io/tx/0xd24d388f61b86d3a726df99231d71fae94e0b7c711a43b5f963ada5ba73cba6b)
-is an example of a successful transaction.  
+is an example of a successful transaction.
 If you look closely, you’ll notice that that the user sent more ETH than was
 necessary to the marketplace. For getting 3 Dai he paid 0.037974683544303797 ETH
 and the rest was returned back to his wallet. This is special to this

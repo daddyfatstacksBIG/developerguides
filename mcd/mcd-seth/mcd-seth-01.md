@@ -74,7 +74,7 @@ For better readability, we are going to save a bunch of contract addresses in
 variables belonging to the related smart contracts deployed to Kovan. In a
 terminal, carry out the following commands (in grey):
 
-**Set the gas quantity**  
+**Set the gas quantity**
 `export ETH_GAS=2000000`
 
 **REP ERC-20 token contract**
@@ -146,21 +146,21 @@ explanation of relevant terms.
 - `rat`: collateralization ratio
 
 After giving permission to the REP adapter of MCD to take some of our tokens,
-it’s time to finally start using the MCD contracts.  
+it’s time to finally start using the MCD contracts.
 We'll be using the [CDP Manager](https://github.com/makerdao/dss-cdp-manager) as
 the prefered interface to interact with MCD contracts.
 
 First let's open a Vault so we can use it to lock collateral into. For this we
-need to define the type of collateral(REP-A) we want to lock in this Vault.  
-`export ilk=$(seth --to-bytes32 $(seth --from-ascii "REP-A"))`  
-Now let's open the Vault  
+need to define the type of collateral(REP-A) we want to lock in this Vault.
+`export ilk=$(seth --to-bytes32 $(seth --from-ascii "REP-A"))`
+Now let's open the Vault
 `seth send $CDP_MANAGER 'open(bytes32)' $ilk`
 
-We need the `cdpId` of our open Vault so we can interact with the system.  
-`export cdpId=$(seth --to-dec $(seth call $CDP_MANAGER 'last(address)' $ETH_FROM))`  
+We need the `cdpId` of our open Vault so we can interact with the system.
+`export cdpId=$(seth --to-dec $(seth call $CDP_MANAGER 'last(address)' $ETH_FROM))`
 In this case `cdpId` is `8`
 
-Now, we need to get the `urn` address of our Vault.  
+Now, we need to get the `urn` address of our Vault.
 `export urn=$(seth call $CDP_MANAGER 'urns(uint)(address)' $cdpId)`
 
 After acquiring `cdpId` and `urn` address, we can move to the next step. Locking
@@ -183,7 +183,7 @@ our account and sending to `urn` address.
 `seth send $MCD_JOIN_REP_A "join(address, uint)" $urn $wad`
 
 You can check the results with the contract function:
-`gem(bytes32 ilk,address urn)(uint256)` with  
+`gem(bytes32 ilk,address urn)(uint256)` with
 `seth --from-wei $(seth --to-dec $(seth call $MCD_VAT 'gem(bytes32,address)(uint256)' $ilk $urn)) eth`
 
 The output should look like this:
@@ -232,10 +232,10 @@ the function for it: `exit(address guy, uint256 wad)`
 
 Let’s execute:
 
-Permitting Dai adapter to move Dai from VAT to your address.  
+Permitting Dai adapter to move Dai from VAT to your address.
 `seth send $MCD_VAT 'hope(address)' $MCD_JOIN_DAI`
 
-Exiting Dai:  
+Exiting Dai:
 `seth send $MCD_JOIN_DAI "exit(address, uint256)" $ETH_FROM $dart`
 
 And to check the DAI balance of your account:

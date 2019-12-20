@@ -100,11 +100,11 @@ If you see this, then congrats, you have your test chain running on
 
 ## Options
 
-You have some configuration options to run your test chain.  
+You have some configuration options to run your test chain.
 In order to add these options you need to add some flags `-- optionName` as a
 suffix to the start command.
 
-For example:  
+For example:
 If you want to run the test chain with verbose option, you run the bellow
 script:
 
@@ -224,7 +224,7 @@ export ETH_FROM=0x...address
 ```
 
 - This is the first address under ‘Available Accounts’ appearing in the first
-  terminal when starting the test chain with `--verbose` flag.  
+  terminal when starting the test chain with `--verbose` flag.
   You need to add this address because it is already filled with some ether for
   you by the test chain.
 
@@ -251,9 +251,9 @@ In order to create the keystore with the private key, do one of the following:
   here: `~/Library/Ethereum/keystore/<UTC…time.info…> — <yourPublicAddress>` on
   MAC OS or here `~/.ethereum/keystore` on Ubuntu.
 
-Store the `keystore` in the `accounts` folder.  
+Store the `keystore` in the `accounts` folder.
 Next, you need to create a file, let’s name it `pass` and save the password that
-accesses the keystore file you created prior.  
+accesses the keystore file you created prior.
 So, by now you should have two files in the accounts folder: `keystore` and
 `pass`. Now you can add the next variables:
 
@@ -407,7 +407,7 @@ Credit System. The DSChief contract has authority to call functions on the MOM
 contract after the MKR holders have voted their decisions.
 
 In this case, you as the sole user on the test chain, are performing all the
-function calls necessary to bootstrap the Dai Credit System.  
+function calls necessary to bootstrap the Dai Credit System.
 All the `MCD_MOM` function calls are called by the DSChief contract on the
 mainnet. While on the test chain, you are performing all the roles.
 
@@ -430,7 +430,7 @@ seth send "$MCD_MOM" 'execute(address,bytes memory)' "$MCD_MOM_LIB" "$(seth call
 ```
 
 `PIP_ETH` is a price oracle feed for the ETH price. In this case, you are
-providing the price feed information to the contract.  
+providing the price feed information to the contract.
 Setting the price feed:
 
 ```

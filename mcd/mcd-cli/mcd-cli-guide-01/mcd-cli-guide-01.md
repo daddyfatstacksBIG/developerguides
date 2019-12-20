@@ -115,7 +115,7 @@ tokens that essentially mimic the real tokens that exist on mainnet.
 **address** parameter is the address of the REP to GNT collateral types we have
 added to this deployment.
 
-**Instructions:**  
+**Instructions:**
 In order to receive some REP tokens, you must run the following commands in the
 CLI:
 
@@ -133,8 +133,8 @@ CLI:
 
 **iv. Please verify your REP balance by running:**
 
-`$ seth --from-wei $(seth --to-dec $(seth call $REP 'balanceOf(address)' $ETH_FROM)) eth`  
-or  
+`$ seth --from-wei $(seth --to-dec $(seth call $REP 'balanceOf(address)' $ETH_FROM)) eth`
+or
 `mcd --ilk=REP-A gem balance ext`
 
 **An example of the output you should be viewing when running the above
@@ -172,7 +172,7 @@ Collateral tokens’** section above.
 **1. Add the REP token into the REP adapter. Here, you must change the below
 value of ’40’ to your own value.**
 
-**Run:**  
+**Run:**
 `$ mcd --ilk=REP-A gem join 40`
 
 **Output Example:**
@@ -205,8 +205,8 @@ don’t forget to change the below value of 40 to your own value.**
 
 ---
 
-**3. Withdraw Dai and send it to your ETH personal account.**  
-**Run:**  
+**3. Withdraw Dai and send it to your ETH personal account.**
+**Run:**
 `$ mcd dai exit 1`
 
 **Example Output:**
@@ -221,7 +221,7 @@ these steps again.
 
 **4. Add your Dai back into the urn.**
 
-**Run:**  
+**Run:**
 `$ mcd dai join 1`
 
 **Example Output:**

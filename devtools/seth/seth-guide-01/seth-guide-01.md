@@ -326,7 +326,7 @@ estimation for the gas consumption (it was perfectly accurate):
 
 `$ seth receipt 0x58ba3980775741aecaf8435646a003bff3395d7d4e00c8f7a32ad1fa0ce64e01 gasUsed`
 
-Output:  
+Output:
 `37240`
 
 ## Additional Resources
