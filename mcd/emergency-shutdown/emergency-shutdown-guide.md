@@ -1,7 +1,7 @@
 # Emergency Shutdown Guide - MCD
 
-**Level:** Advanced  
-**Estimated Time:** 30 min  
+**Level:** Advanced
+**Estimated Time:** 30 min
 **Audience:** Technical and commercial teams that hold Dai and/or own Vaults.
 
 # Overview
@@ -130,7 +130,7 @@ be claimed is determined by the Maker Oracles at the time ES is triggered.
   the Emergency Shutdown has been triggered, a user could transfer the token or
   invoke any other function in the Dai ERC20 contract.
 
-![](https://lh6.googleusercontent.com/-1uUOYCTeE3gIf9hMIVHg8aONDoYPXY3wWANWX6elx1ZpeybB7x4OHGFklNXq3j04XMRJvoDPBkm1RowBpHgZLKNLO54RN1P7O6GoTlH5n3jXuSzd_qiT1_3gplngeXvWpya3iY)  
+![](https://lh6.googleusercontent.com/-1uUOYCTeE3gIf9hMIVHg8aONDoYPXY3wWANWX6elx1ZpeybB7x4OHGFklNXq3j04XMRJvoDPBkm1RowBpHgZLKNLO54RN1P7O6GoTlH5n3jXuSzd_qiT1_3gplngeXvWpya3iY)
 Emergency Shutdown Process - visualized
 
 ## Emergency Shutdown Scenarios

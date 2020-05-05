@@ -101,11 +101,11 @@ If you see this, then congrats, you have your test chain running on
 
 ## Options
 
-You have some configuration options to run your test chain.  
+You have some configuration options to run your test chain.
 In order to add these options you need to add some flags `-- optionName` as a
 suffix to the start command.
 
-For example:  
+For example:
 If you want to run the test chain with verbose option, you run the bellow
 script:
 
@@ -221,7 +221,7 @@ chain. In your second terminal tab, in your home location, add these variables:
 export ETH_FROM=0x16fb96a5fa0427af0c8f7cf1eb4870231c8154b6
 ```
 
-- Taken from `testchain/out/addresses-mcd.json` under `ETH_FROM`.  
+- Taken from `testchain/out/addresses-mcd.json` under `ETH_FROM`.
   You need to add this address because it is already filled with some ether for
   you by the test chain.
 
@@ -505,7 +505,7 @@ By running your own MCD instance, you have the liberty of changing the
 collateral prices. This can be useful to test liquidations.
 
 `PIP_ETH` is a price oracle feed for the ETH price. In this case, you are
-providing the price feed information to the contract.  
+providing the price feed information to the contract.
 To read the current price:
 
 ```

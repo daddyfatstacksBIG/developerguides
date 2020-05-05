@@ -335,7 +335,7 @@ ACCOUNT_KEY="key_file=/Users/username/Documents/Keeper/accounts/keystore,pass_fi
 ```
 
 `SERVER_ETH_RPC_HOST` - Should not be an infura node, as it doesn't provide all
-the functionality that the python script needs  
+the functionality that the python script needs
 `ACCOUNT_KEY` - Should have the absolute path to the keystore and password file.
 Define the path as shown above, as the python script will parse through both the
 keystore and password files.
@@ -401,7 +401,7 @@ https://data.concourseopen.com/
 3. Lastly, run `flip-eth-a.sh model-eth.sh` to pass your bidding model into your
    Auction Keeper script.
 
-Example of a working keeper:  
+Example of a working keeper:
 After running the `./flip-eth-a.sh model-eth.sh` command you will see an output
 like this:
 

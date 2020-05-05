@@ -1,6 +1,6 @@
 # Dai in Smart Contracts
 
-**Level**: Beginner  
+**Level**: Beginner
 **Estimated Time**: 30 minuntes
 
 ## Overview
@@ -34,7 +34,7 @@ set of smart contracts that allows anyone to issue Dai by locking collateral
 ### Setup
 
 To start things off, we will deploy our contract on the Ethereum Kovan network
-as we have deployed our Dai token on the same network.  
+as we have deployed our Dai token on the same network.
 In addition, you’ll need:
 
 - [Metamask](https://metamask.io/)
@@ -55,10 +55,10 @@ mainnet.
 ### Write your code
 
 We will build a faucet contract that you will be able to control and terminate
-in case you desire to do so.  
+in case you desire to do so.
 In your [Remix IDE](https://remix.ethereum.org/) browser tab, create a new file
-named **DaiFaucet.sol**.  
-It should look like this:  
+named **DaiFaucet.sol**.
+It should look like this:
 <img align='middle' src='./images/DaiFaucet.png'>
 
 Now we will add our necessary blocks of code that will form our DaiFaucet
@@ -100,7 +100,7 @@ When we deploy our contract to the Kovan network, the constructor function will
 set the **owner** variable to the address of the calling Ethereum account, and
 set the **daitoken** variable to the address of the Dai token contract on the
 Kovan network, which is
-[0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa](https://kovan.etherscan.io/token/0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa).  
+[0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa](https://kovan.etherscan.io/token/0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa).
  Now the **DaiToken** interface will link to the Dai token address on the kovan network.
 So when we call the **transfer** or **balanceOf** functions, they will call the functions
 of the Dai token contract.
@@ -149,7 +149,7 @@ contract mortal is owned {
 Finally, we are writing the faucet contract. We can see that **DaiFaucet**
 inherits the **mortal** contract, which in turn inherits the **owned** contract.
 This way, we have modularised our contracts for their specific functions and
-added our total control over it.  
+added our total control over it.
 Inside the contract we have two events that will watch and log every time there
 is a **Withdrawal** and a **Deposit** to/from this contract.
 
@@ -194,7 +194,7 @@ contract DaiFaucet is mortal {
 
 ```
 
-This is how it should look like when all the code blocks are put together:  
+This is how it should look like when all the code blocks are put together:
 <img align='middle' src='./images/FullContract.png'>
 
 ### Deploy Smart Contract

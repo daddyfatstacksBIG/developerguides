@@ -86,7 +86,7 @@ For better readability, we are going to save a bunch of contract addresses in
 variables belonging to the related smart contracts deployed to Kovan. In a
 terminal, carry out the following commands (in grey):
 
-**Set the gas quantity**  
+**Set the gas quantity**
 `export ETH_GAS=2000000`
 
 **BAT ERC-20 token contract**
@@ -162,15 +162,15 @@ explanation of relevant terms.
 - `rat`: collateralization ratio
 
 After giving permission to the BAT adapter of MCD to take some of our tokens,
-it’s time to finally start using the MCD contracts.  
+it’s time to finally start using the MCD contracts.
 We'll be using the [CDP Manager](https://github.com/makerdao/dss-cdp-manager) as
 the preferred interface to interact with MCD contracts.
 
 We begin by opening an empty Vault so we can use it to lock collateral into. For
 this we need to define the type of collateral (BAT-A) we want to lock in this
-Vault.  
-`export ilk=$(seth --to-bytes32 $(seth --from-ascii "BAT-A"))`  
-Now let's open the Vault  
+Vault.
+`export ilk=$(seth --to-bytes32 $(seth --from-ascii "BAT-A"))`
+Now let's open the Vault
 `seth send $CDP_MANAGER 'open(bytes32,address)' $ilk $ETH_FROM`
 
 We need the `cdpId` and `urn` address of our open Vault so we can interact with
@@ -242,7 +242,7 @@ dart=$(seth --to-uint256 $(bc<<<"scale=18; art=(20/$rate*10^18+1); scale=0; art/
   is useful to calculate accrued stability fees. To convert the Dai amount to
   normalized art, we have to divide it by the current ilk `rate`.
 
-With the variables set, we can call `frob`:  
+With the variables set, we can call `frob`:
 `seth send $CDP_MANAGER 'frob(uint256,int256,int256)' $cdpId $dink $dart`
 
 Now, let's check out our internal DAI balance to see if we have succeeded. We
@@ -267,10 +267,10 @@ seth send $CDP_MANAGER 'move(uint256,address,uint256)' $cdpId $ETH_FROM $(seth -
 - Here, `rad`, is the total amount of DAI available in the `urn`. We are reading
   this number to get all the DAI possible.
 
-We then permitting the Dai adapter to move Dai from VAT to our address:  
+We then permitting the Dai adapter to move Dai from VAT to our address:
 `seth send $MCD_VAT 'hope(address)' $MCD_JOIN_DAI`
 
-An finally we exit the internal dai to the ERC-20 DAI:  
+An finally we exit the internal dai to the ERC-20 DAI:
 `seth send $MCD_JOIN_DAI "exit(address,uint256)" $ETH_FROM $(seth --to-uint256 $(seth --to-wei 20 eth))`
 
 And to check the DAI balance of our account:

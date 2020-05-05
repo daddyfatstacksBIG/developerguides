@@ -1,6 +1,6 @@
 # Intro to the OasisDEX Protocol
 
-**Level**: Beginner  
+**Level**: Beginner
 **Estimated Time**: 45 - 60 minutes
 
 This guide is based on the
@@ -208,10 +208,10 @@ respectively. Execute the below command to find order details of order `3411`:
 seth call $OASIS 'getOffer(uint)(uint,address,uint,address)' 3411
 ```
 
-Output:  
-`8ac7230489e80000` -> Pay amount in DAI  
-`4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa` -> DAI Token Address  
-`6345785d8a0000` -> Buy amount in WETH  
+Output:
+`8ac7230489e80000` -> Pay amount in DAI
+`4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa` -> DAI Token Address
+`6345785d8a0000` -> Buy amount in WETH
 `d0a1e359811322d97991e03f863a0c30c2cf029c` -> WETH Token Address
 
 You can convert the hex outputs of DAI and WETH amounts to decimal:
@@ -320,7 +320,7 @@ When this is the case, you could use the buy(uint id, uint amount) function. The
 first parameter is the id of the offer, which you can get with getBestOffer()
 function, and the second parameter is the amount you'd like to buy.
 
-Let's buy some DAI that is being sold at 177 DAI/WETH.  
+Let's buy some DAI that is being sold at 177 DAI/WETH.
 First, let's get the order id of this offer:
 
 ```
