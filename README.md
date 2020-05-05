@@ -1,8 +1,12 @@
 # Developer Guides and Tutorials
 
-Developers can build a variety of experiences using one or more components of the Maker Protocol. This repo contains guides and tutorials to help you understand various approaches to integrate with the Maker Protocol and our partners by interfacing with smart contracts, SDKs, APIs, and products.
+Developers can build a variety of experiences using one or more components of
+the Maker Protocol. This repo contains guides and tutorials to help you
+understand various approaches to integrate with the Maker Protocol and our
+partners by interfacing with smart contracts, SDKs, APIs, and products.
 
-All guides are organized in sections and by proficiency levels within each section.
+All guides are organized in sections and by proficiency levels within each
+section.
 
 ## Keepers (Collateral Auctions, Debt Auctions, Arbitrage)
 
@@ -25,6 +29,7 @@ All guides are organized in sections and by proficiency levels within each secti
 - [Dai in Smart Contracts](https://github.com/makerdao/developerguides/tree/master/dai/dai-in-smart-contracts/README.md)
 - [Dai Savings Rate integration guide](https://github.com/makerdao/developerguides/tree/master/dai/dsr-integration-guide/dsr-integration-guide-01.md)
 - [Tracking Dai Supply](https://github.com/makerdao/developerguides/tree/master/dai/dai-supply/dai-supply.md)
+
 ## Maker Protocol / Multi-Collateral Dai
 
 - [Introduction and Overview of Multi-Collateral Dai: MCD101](https://github.com/makerdao/developerguides/tree/master/mcd/mcd-101/mcd-101.md)
@@ -62,7 +67,9 @@ All guides are organized in sections and by proficiency levels within each secti
 
 ## Partner compilations
 
-In order to ensure that integration partners can get up and running quickly, relevant documentation for specific partner types have been compiled in a series of guides.
+In order to ensure that integration partners can get up and running quickly,
+relevant documentation for specific partner types have been compiled in a series
+of guides.
 
 - [Upgrading to Multi-Collateral Dai](https://github.com/makerdao/developerguides/tree/master/mcd/upgrading-to-multi-collateral-dai/cli-mcd-migration.md)
 - [Exchanges](https://github.com/makerdao/developerguides/tree/master/exchanges/README.md)
@@ -72,9 +79,11 @@ In order to ensure that integration partners can get up and running quickly, rel
 
 ## Contribution guidelines
 
-We welcome submissions of guides and tutorials that cover new types of integrations! Following these guidelines will help us maintain consistency,
+We welcome submissions of guides and tutorials that cover new types of
+integrations! Following these guidelines will help us maintain consistency,
 
-- Include all the sections present in this [sample guide](https://github.com/makerdao/developerguides/tree/master/sample/sample-guide-01/sample-guide-01.md)  
+- Include all the sections present in this
+  [sample guide](https://github.com/makerdao/developerguides/tree/master/sample/sample-guide-01/sample-guide-01.md)
 - Create a folder with one markdown file using the same name
 - Append a number if a guide needs to be split into multiple parts
 
